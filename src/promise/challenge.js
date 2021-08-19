@@ -4,7 +4,7 @@ const API = 'https://rickandmortyapi.com/api/character/';
 fetchData(API)                //Ejecuto la promesa con el valor de mi API
     .then(data =>{
         console.log(data.info.count);
-        return fetchData('${API}${data.results[0].id}') //Retorno una nueva petición con los nuevos datos
+        return fetchData(`${API}${data.results[0].id}`) //Retorno una nueva petición con los nuevos datos
     })
     .then(data => {
         console.log(data.name)
